@@ -18,6 +18,15 @@ class Solution:
                     p_2 = nums.index(i[1])
                 return [p_1, p_2]
         return None
+    def twoSumFast(self, nums: List[int], target: int) -> List[int]:
+        d = {}
+        for i, num in enumerate(nums):
+            diff = target - num
+            if num in d:
+                return d[num], i
+            else:
+                d[diff] = i
+        return None
 
 sums = Solution()
 sums.twoSum([2, 7, 11, 15], 9)
