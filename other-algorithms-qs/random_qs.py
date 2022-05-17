@@ -27,3 +27,20 @@ def mystery(lst):
     return lst
 
 mystery([1,2,3,4])
+
+# Threading 
+
+from threading import Thread
+import time
+
+x = 0
+def increment():
+    global x
+    time.sleep(.001)  # Wait 0.001 seconds.
+    x = x + 1
+
+for i in range(100):
+    t = Thread(target=increment)  # Create a thread to execute increment.
+    t.start()  # Start thread execution.
+
+print(x) # output will be less than or equal to 100 every time.
