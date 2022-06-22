@@ -1,3 +1,16 @@
+'''
+Prompt
+Original string: abcdefghijklmn
+
+Operations:F -> move curser forward, B -> move curse backward, R -> replace char
+
+Operation string: F2B1F5Rw  -> abcdefwhijklmn (expected output)
+
+Moving forward by 2 chars, move backward by 1 char, move forward 5 chars, replace 1 char to be "w"
+
+We can assume that curser is at first character at the beginning.
+'''
+
 import re
 
 class string_insert:
